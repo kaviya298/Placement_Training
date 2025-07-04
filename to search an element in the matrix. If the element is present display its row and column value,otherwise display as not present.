@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int k=sc.nextInt();
+        int [][]a=new int[n][n];
+        int rows,col,index1=-1,index2=-1,flag=0;
+        for(rows=0;rows<n;rows++){
+            for(col=0;col<n;col++){
+                a[rows][col]=sc.nextInt();
+            }
+        }
+        
+        for(rows=0;rows<n;rows++){
+            for(col=0;col<n;col++){
+                if(a[rows][col]==k){
+                    index1=rows;
+                    index2=col;
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==1)
+                break;
+        }
+        if(flag==1){
+            System.out.println("Element found at row "+index1+" and col "+index2);
+        }
+        else{
+            System.out.println("Element not found");
+        }
+    }
+}
