@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int [][]a=new int[n][n];
+        int rows,col,sum=0;
+        for(rows=0;rows<n;rows++){
+            for(col=0;col<n;col++){
+                a[rows][col]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<n;i++){
+                sum=sum+a[i][n-i-1];
+            }
+        System.out.println(sum);
+        }
+    
