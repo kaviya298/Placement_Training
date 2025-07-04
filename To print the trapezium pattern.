@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int rows,space,col,val=1,val1;
+        int total=n*(n+1);
+        
+        for(rows=n;rows>=1;rows--){
+            total=total-rows;
+            val1=total;
+            for(space=1;space<=n-rows;space++){
+                System.out.print("--");
+            }
+            for(col=1;col<=rows;col++){
+                System.out.print(val+"*");
+                val++;
+            }
+            for(col=1;col<=rows-1;col++){
+                val1++;
+                System.out.print(val1+"*");
+            }
+            val1++;
+            System.out.print(val1);
+            System.out.println(" ");
+        }
+    }
+}
