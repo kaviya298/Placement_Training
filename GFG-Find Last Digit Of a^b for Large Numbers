@@ -1,0 +1,11 @@
+import java.util.*;
+import java.math.BigInteger;
+class Solution {
+    static int getLastDigit(String a, String b) {
+        // code here
+        BigInteger base=new BigInteger(a);
+        BigInteger exponent=new BigInteger(b);
+        BigInteger digit=base.modPow(exponent,BigInteger.TEN);
+        return digit.intValue();
+    }
+};
