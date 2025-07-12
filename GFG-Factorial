@@ -1,0 +1,15 @@
+import java.util.*;
+class Solution {
+    static int factorial(int n) {
+        int fact=1;
+        if(n>=1){
+        for(int i=n;i>0;i--){
+            fact=fact*i;
+        }
+        }
+        if(n==0){
+            fact=1;
+        }
+        return fact;
+    }
+}
