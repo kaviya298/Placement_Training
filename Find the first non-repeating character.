@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String str=sc.nextLine();
+	    boolean found=false;
+	    
+	    for(int i=0;i<str.length();i++){
+	        char ch=str.charAt(i);
+	        boolean isunique=true;
+	        
+	        for(int j=0;j<str.length();j++){
+	            if(i!=j && ch==str.charAt(j)){
+	                isunique=false;
+	                break;
+	            }
+	        }
+	        
+	        if(isunique==true){
+	            System.out.println(ch);
+	            found=true;
+	            break;
+	        }
+	    }
+	    if(!found){
+	        System.out.println("NO element repeated");
+	    }
+	}
+}
